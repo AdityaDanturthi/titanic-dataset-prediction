@@ -12,7 +12,6 @@ SibSp = st.slider("Number of siblings / spouses aboard the Titanic",0,10)
 Parch = st.slider("Number of parents / children aboard the Titanic",0,2)
 
 df_pred = pd.DataFrame([[Pclass,Sex,SibSp,Parch]])
-df_pred
 
 model = joblib.load('titanic_rf_model.pkl')
 prediction = model.predict(df_pred)
